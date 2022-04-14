@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated festFair -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="festFair.presentation.FestFairModelWizardID"
+            name="%_UI_FestFairModelWizard_label"
+            class="festFair.presentation.FestFairModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/FestFairModelFile.gif">
+         <description>%_UI_FestFairModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated festFair -->
+      <editor
+            id="festFair.presentation.FestFairEditorID"
+            name="%_UI_FestFairEditor_label"
+            icon="icons/full/obj16/FestFairModelFile.gif"
+            extensions="festfair"
+            class="festFair.presentation.FestFairEditor"
+            contributorClass="festFair.presentation.FestFairActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

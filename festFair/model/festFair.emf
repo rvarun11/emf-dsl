@@ -1,0 +1,52 @@
+@namespace(uri="vr/festFair", prefix="festFair")
+package festFair;
+
+abstract class NamedElement {
+	attr String name;
+}
+
+@gmf.diagram(model.extension="festFair")
+class FestFair extends NamedElement {
+	val FairDay[*] fairDays;
+	val Person[*] attendees;
+}
+
+@gmf.node(label="name,n", label.pattern="Day {1}: {0}")
+class FairDay extends NamedElement {
+	attr String n;
+	@gmf.compartment
+	val Activity[*] activities;
+}
+
+abstract class Activity extends NamedElement {
+    ref Volunteer#work volunteer;
+	ref Guest[*]#visit guests;
+}
+
+@gmf.node(figure="rectangle", label="name")
+class Stall extends Activity {
+	attr int availableSpace;
+}
+
+@gmf.node(figure="rectangle", label="name,time", label.pattern="{0}: {1}")
+class Event extends Activity {
+	attr String time;
+}
+
+abstract class Person extends NamedElement {
+	attr int age;
+	attr String email;
+}
+
+@gmf.node(label="name", label.pattern="Guest {0}")
+class Guest extends Person {
+	@gmf.link(target.decoration="arrow", source.decoration="none", style="dot", width="2",color="0,255,0")
+	ref Activity#guests visit;
+}
+
+@gmf.node(label="name", label.pattern="Volunteer {0}")
+class Volunteer extends Person {
+	attr int partnerId;
+	@gmf.link(target.decoration="arrow", source.decoration="none", style="solid", width="2",color="241,194,50")
+	ref Activity#volunteer work;
+}

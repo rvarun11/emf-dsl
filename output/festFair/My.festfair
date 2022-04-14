@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<festFair:FestFair xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:festFair="vr/festFair" name="Diwali">
+  <fairDays name="Welcome to Diwali Fest Fair 2022" n="1">
+    <activities xsi:type="festFair:Event" name="Welcome Event" volunteer="//@attendees.10" guests="//@attendees.3" time="19:30 - 21:30"/>
+  </fairDays>
+  <fairDays name="Gamers' Delight" n="3">
+    <activities xsi:type="festFair:Stall" name="Gaming Stall" volunteer="//@attendees.0" guests="//@attendees.6"/>
+    <activities xsi:type="festFair:Event" name="Gaming Event" volunteer="//@attendees.11" guests="//@attendees.8" time="18:30 - 20:30"/>
+  </fairDays>
+  <fairDays name="Foodies' Delight" n="2">
+    <activities xsi:type="festFair:Stall" name="Food Stall 1" guests="//@attendees.4"/>
+    <activities xsi:type="festFair:Stall" name="Food Stall 2" volunteer="//@attendees.1" guests="//@attendees.5"/>
+  </fairDays>
+  <fairDays name="Finale" n="4">
+    <activities xsi:type="festFair:Event" name="Final Event" volunteer="//@attendees.12" guests="//@attendees.7 //@attendees.9" time="19:30 - 21:30"/>
+  </fairDays>
+  <attendees xsi:type="festFair:Volunteer" name="Varun" partnerId="403" work="//@fairDays.1/@activities.0"/>
+  <attendees xsi:type="festFair:Volunteer" name="Brandon" partnerId="106" work="//@fairDays.2/@activities.1"/>
+  <attendees xsi:type="festFair:Volunteer" name="Jiawen" email="" partnerId="238"/>
+  <attendees xsi:type="festFair:Guest" name="Dr. Paige" visit="//@fairDays.0/@activities.0"/>
+  <attendees xsi:type="festFair:Guest" name="Dr. Anand" visit="//@fairDays.2/@activities.0"/>
+  <attendees xsi:type="festFair:Guest" name="Sangeeta" visit="//@fairDays.2/@activities.1"/>
+  <attendees xsi:type="festFair:Guest" name="Ritika" visit="//@fairDays.1/@activities.0"/>
+  <attendees xsi:type="festFair:Guest" name="Kailash" visit="//@fairDays.3/@activities.0"/>
+  <attendees xsi:type="festFair:Guest" name="Chris" visit="//@fairDays.1/@activities.1"/>
+  <attendees xsi:type="festFair:Guest" name="Vipul" visit="//@fairDays.3/@activities.0"/>
+  <attendees xsi:type="festFair:Volunteer" name="Jason" partnerId="112" work="//@fairDays.0/@activities.0"/>
+  <attendees xsi:type="festFair:Volunteer" name="Pesara" partnerId="562" work="//@fairDays.1/@activities.1"/>
+  <attendees xsi:type="festFair:Volunteer" name="Alex" partnerId="148" work="//@fairDays.3/@activities.0"/>
+</festFair:FestFair>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/festFair/src" modelPluginID="festFair"
+    modelName="FestFair" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>festFair.emf</foreignModel>
+  <genPackages prefix="FestFair" disposableProviderFactory="true" ecorePackage="festFair.ecore#/">
+    <genClasses image="false" ecoreClass="festFair.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute festFair.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="festFair.ecore#//FestFair">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference festFair.ecore#//FestFair/fairDays"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference festFair.ecore#//FestFair/attendees"/>
+    </genClasses>
+    <genClasses ecoreClass="festFair.ecore#//FairDay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute festFair.ecore#//FairDay/n"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference festFair.ecore#//FairDay/activities"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="festFair.ecore#//Activity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference festFair.ecore#//Activity/volunteer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference festFair.ecore#//Activity/guests"/>
+    </genClasses>
+    <genClasses ecoreClass="festFair.ecore#//Stall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute festFair.ecore#//Stall/availableSpace"/>
+    </genClasses>
+    <genClasses ecoreClass="festFair.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute festFair.ecore#//Event/time"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="festFair.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute festFair.ecore#//Person/age"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute festFair.ecore#//Person/email"/>
+    </genClasses>
+    <genClasses ecoreClass="festFair.ecore#//Guest">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference festFair.ecore#//Guest/visit"/>
+    </genClasses>
+    <genClasses ecoreClass="festFair.ecore#//Volunteer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute festFair.ecore#//Volunteer/partnerId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference festFair.ecore#//Volunteer/work"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

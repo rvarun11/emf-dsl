@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="festFair">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="GuestVisitFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="VolunteerWorkFigureTargetDecoration"/>
+    <descriptors name="FairDayFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="FairDayFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="FairDayLabelFigure" text="FairDay">
+          <maximumSize dx="10000" dy="50"/>
+          <font xsi:type="gmfgraph:BasicFont" style="BOLD"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="FairDayActivitiesCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureFairDayLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+      <accessors accessor="getFairDayActivitiesCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="StallFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="StallFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="StallLabelFigure" text="Stall"/>
+      </actualFigure>
+      <accessors accessor="getFigureStallLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="EventFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="EventFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="EventLabelFigure" text="Event"/>
+      </actualFigure>
+      <accessors accessor="getFigureEventLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="GuestFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="GuestFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="GuestLabelFigure" text="Guest"/>
+      </actualFigure>
+      <accessors accessor="getFigureGuestLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="VolunteerFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="VolunteerFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="VolunteerLabelFigure" text="Volunteer"/>
+      </actualFigure>
+      <accessors accessor="getFigureVolunteerLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="GuestVisitFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="GuestVisitFigure" lineWidth="2" lineKind="LINE_DOT" targetDecoration="//@figures.0/@figures.0">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" green="255"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="GuestVisitExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="GuestVisitExternalLabel"/>
+    </descriptors>
+    <descriptors name="VolunteerWorkFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="VolunteerWorkFigure" lineWidth="2" targetDecoration="//@figures.0/@figures.1">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="241" green="194" blue="50"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="VolunteerWorkExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="VolunteerWorkExternalLabel"/>
+    </descriptors>
+  </figures>
+  <nodes name="FairDay" figure="FairDayFigure"/>
+  <nodes name="Stall" figure="StallFigure"/>
+  <nodes name="Event" figure="EventFigure"/>
+  <nodes name="Guest" figure="GuestFigure"/>
+  <nodes name="Volunteer" figure="VolunteerFigure"/>
+  <connections name="GuestVisit" figure="GuestVisitFigure"/>
+  <connections name="VolunteerWork" figure="VolunteerWorkFigure"/>
+  <compartments name="FairDayActivitiesCompartment" figure="FairDayFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.1"/>
+  <labels name="FairDayLabel" figure="FairDayFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="StallLabel" figure="StallFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="EventLabel" figure="EventFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="GuestLabel" figure="GuestFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="VolunteerLabel" figure="VolunteerFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="GuestVisitExternalLabel" figure="GuestVisitExternalLabelFigure" elementIcon="false"/>
+  <labels name="VolunteerWorkExternalLabel" figure="VolunteerWorkExternalLabelFigure" elementIcon="false"/>
+</gmfgraph:Canvas>

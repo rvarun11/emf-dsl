@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfmap:Mapping
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:gmfmap="http://www.eclipse.org/gmf/2008/mappings"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <nodes>
+    <containmentFeature
+        href="festFair.ecore#//FestFair/attendees"/>
+    <ownedChild>
+      <domainMetaElement
+          href="festFair.ecore#//Guest"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping"
+          viewPattern="Guest {0}"
+          editorPattern="Guest {0}"
+          editPattern="Guest {0}">
+        <diagramLabel
+            href="festFair.gmfgraph#GuestLabel"/>
+        <features
+            href="festFair.ecore#//NamedElement/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="festFair.gmftool#//@palette/@tools.0/@tools.2"/>
+      <diagramNode
+          href="festFair.gmfgraph#Guest"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="festFair.ecore#//FestFair/attendees"/>
+    <ownedChild>
+      <domainMetaElement
+          href="festFair.ecore#//Volunteer"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping"
+          viewPattern="Volunteer {0}"
+          editorPattern="Volunteer {0}"
+          editPattern="Volunteer {0}">
+        <diagramLabel
+            href="festFair.gmfgraph#VolunteerLabel"/>
+        <features
+            href="festFair.ecore#//NamedElement/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="festFair.gmftool#//@palette/@tools.0/@tools.4"/>
+      <diagramNode
+          href="festFair.gmfgraph#Volunteer"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="festFair.ecore#//FestFair/fairDays"/>
+    <ownedChild
+        relatedDiagrams="//@diagram">
+      <domainMetaElement
+          href="festFair.ecore#//FairDay"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping"
+          viewPattern="Day {1}: {0}"
+          editorPattern="Day {1}: {0}"
+          editPattern="Day {1}: {0}">
+        <diagramLabel
+            href="festFair.gmfgraph#FairDayLabel"/>
+        <features
+            href="festFair.ecore#//NamedElement/name"/>
+        <features
+            href="festFair.ecore#//FairDay/n"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="festFair.gmftool#//@palette/@tools.0/@tools.1"/>
+      <diagramNode
+          href="festFair.gmfgraph#FairDay"/>
+      <children
+          compartment="//@nodes.2/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="festFair.ecore#//FairDay/activities"/>
+        <ownedChild>
+          <domainMetaElement
+              href="festFair.ecore#//Stall"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="festFair.gmfgraph#StallLabel"/>
+            <features
+                href="festFair.ecore#//NamedElement/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="festFair.gmftool#//@palette/@tools.0/@tools.3"/>
+          <diagramNode
+              href="festFair.gmfgraph#Stall"/>
+        </ownedChild>
+      </children>
+      <children
+          compartment="//@nodes.2/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="festFair.ecore#//FairDay/activities"/>
+        <ownedChild>
+          <domainMetaElement
+              href="festFair.ecore#//Event"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping"
+              viewPattern="{0}: {1}"
+              editorPattern="{0}: {1}"
+              editPattern="{0}: {1}">
+            <diagramLabel
+                href="festFair.gmfgraph#EventLabel"/>
+            <features
+                href="festFair.ecore#//NamedElement/name"/>
+            <features
+                href="festFair.ecore#//Event/time"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="festFair.gmftool#//@palette/@tools.0/@tools.0"/>
+          <diagramNode
+              href="festFair.gmfgraph#Event"/>
+        </ownedChild>
+      </children>
+      <compartments
+          children="//@nodes.2/@ownedChild/@children.0 //@nodes.2/@ownedChild/@children.1">
+        <compartment
+            href="festFair.gmfgraph#FairDayActivitiesCompartment"/>
+      </compartments>
+    </ownedChild>
+  </nodes>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="festFair.gmfgraph#GuestVisitExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="festFair.gmftool#//@palette/@tools.1/@tools.0"/>
+    <diagramLink
+        href="festFair.gmfgraph#GuestVisit"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="festFair.ecore#//Guest/visit"/>
+  </links>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="festFair.gmfgraph#VolunteerWorkExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="festFair.gmftool#//@palette/@tools.1/@tools.1"/>
+    <diagramLink
+        href="festFair.gmfgraph#VolunteerWork"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="festFair.ecore#//Volunteer/work"/>
+  </links>
+  <diagram>
+    <diagramCanvas
+        href="festFair.gmfgraph#festFair"/>
+    <domainModel
+        href="festFair.ecore#/"/>
+    <domainMetaElement
+        href="festFair.ecore#//FestFair"/>
+    <palette
+        href="festFair.gmftool#//@palette"/>
+  </diagram>
+</gmfmap:Mapping>

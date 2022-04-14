@@ -1,0 +1,33 @@
+<h3> [%=fest.name%] Schedule</h3>
+<table border="1">
+	<tr><td>Day</td><td>Activity</td></tr>
+	[%for (d in fest.fairDays.sortBy(d|d.n)){%]
+		[%for (a in d.activities){%]
+		<tr>
+			<td>[%=d.n%]</td>
+			<td>[%=a.name%]</td>
+		</tr>
+		[%}%]
+	[%}%]
+</table>
+<hr>
+
+<h3> Volunteer List</h3>
+<h4> For office use only</h4>
+<table border="1">
+	<tr><td>Id</td><td>Volunteer</td><td>Activity</td></tr>
+	[%for (d in fest.fairDays.sortBy(d|d.n)){%]
+		[%for (a in d.activities){%]
+		<tr>
+			<td>[%=a.volunteer.partnerId%]</td>
+			<td>[%=a.volunteer.name%]</td>
+			<td>[%=a.name%]</td>
+		</tr>
+		[%}%]
+	[%}%]
+</table>
+
+
+
+
+

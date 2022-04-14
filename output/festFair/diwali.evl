@@ -1,0 +1,76 @@
+context NamedElement {
+	constraint HasName {
+		check: self.name.isDefined()
+		message: "Element needs a name"
+	}
+}
+
+context FestFair {
+	constraint HasAtleastOneDay {
+		check: self.fairDays.size() > 0
+		message: "Fest fair " + self.name + " needs atleast one fair day"
+	}
+	
+	constraint HasAtleastOnePerson {
+		check: self.attendees.size() > 0
+		message: "Fest fair " + self.name + " needs atleast one person"
+	}
+}
+
+context FairDay {
+	critique HasId {
+		check: self.n.isDefined()
+		message: "Fair day " + self.name + " needs a day number"
+	}
+
+	constraint HasAtleastOneActivity {
+		check: self.activities.size() > 0
+		message: "Fest day " + self.n + " needs atleast one activity"
+	}
+}
+
+context Activity {
+	constraint HasVolunteer {
+		check: self.volunteer.isDefined()
+		message: "Activity " + self.name + " needs a volunteer"
+	}
+}
+
+context Event {
+	constraint HasDuration {
+		check: self.time.isDefined()
+		message: "Event " + self.name + " must have a duration"
+	}
+}
+
+context Stall {
+	constraint HasAvailableSpace {
+		check: self.availableSpace.isDefined()
+		message: "Stall " + self.name + " must provide space available"
+	}
+}
+
+context Person {
+	constraint HasAge {
+		check: self.age.isDefined()
+		message: "Person " + self.name + " must have an age"
+	}
+	
+	critique HasEmail {
+		check: self.email.isDefined()
+		message: "Person " + self.name + " should have an email"
+	}
+}
+
+context Volunteer {
+	constraint HasPartnerId {
+		check: self.partnerId.isDefined()
+		message: "Volunteer " + self.name + " must have a partner id"
+	}
+	
+	constraint HasPartnerId {
+		check: self.partnerId.isDefined()
+		message: "Volunteer " + self.name + " must have a partner id"
+	}
+}
+

@@ -1,0 +1,7 @@
+rule FestFair2HTML
+	transform fest : FestFair {
+	
+		template: "festFair.egl"
+	
+		target: "festFair.html"
+	}

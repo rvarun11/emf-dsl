@@ -1,0 +1,12 @@
+<h1> [%=fest.name%] Schedule</h1>
+<table border="1">
+	<tr><td>Day</td><td>Activity</td></tr>
+	[%for (d in fest.fairDays.sortBy(d|d.n)){%]
+	[%for (a in d.activities){%]
+	<tr>
+		<td>[%=d.n%]</td>
+		<td>[%=a.name%]</td>
+	</tr>
+	[%}%]
+	[%}%]
+</table>

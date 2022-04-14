@@ -1,0 +1,4 @@
+var label = GmfGraph!Label.all.selectOne(l|l.name="FairDayLabelFigure");
+
+label.font = new GmfGraph!BasicFont;
+label.font.style = GmfGraph!FontStyle#BOLD;

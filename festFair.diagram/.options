@@ -1,0 +1,7 @@
+# Tracing options for the festFair.diagram plug-in
+
+# Common issues
+festFair.diagram/debug=false
+
+# Visual IDs
+festFair.diagram/debug/visualID=false
